@@ -1,9 +1,11 @@
+import { QueryClient } from "./api/queryClient"
+import { ListAllPokemonPage } from "./pages/ListAll"
 
 function App() {
   return (
-    <>
-      <div>your app here</div>
-    </>
+    <QueryClient>
+      <ListAllPokemonPage />
+    </QueryClient>
   )
 }
 
