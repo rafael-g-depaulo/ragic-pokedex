@@ -14,6 +14,11 @@ const NavigationPannel = styled.main`
   gap: 1.6rem;
   background: #2196f3;
 
+	a {
+		cursor: pointer;
+		text-decoration: none;
+	}
+
   > :first-child {
     border-radius: 1.5rem;
     padding: 1.2rem 1.8rem;
