@@ -9,4 +9,8 @@ export const PageTitle = styled.h1`
   font-weight: bold;
   color: #03303b;
   background: #83becd;
+
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
 `

@@ -1,4 +1,5 @@
 import { useAllPokemon } from "../api/allPokemon"
+import { Loading } from "../components/Loading"
 import { Navbar } from "../components/Navbar"
 import { PageContent } from "../components/PageContent"
 import { PageTitle } from "../components/PageTitle"
@@ -13,13 +14,11 @@ export const ListAllPokemonPage = () => {
       <PageContent>
         <PageTitle>List all Pokemon</PageTitle>
         <PokelistContainer>
-          {data &&
+          {!data ? <Loading /> :
             data.map((pokemon) => (
               <PokeCard pokemon={pokemon} key={pokemon.name} />
             ))}
         </PokelistContainer>
-        {/* <pre>{JSON.stringify(bulba, null, 2)}</pre> */}
-        {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       </PageContent>
     </>
   )

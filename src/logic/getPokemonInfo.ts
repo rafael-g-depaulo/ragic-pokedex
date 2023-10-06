@@ -74,10 +74,14 @@ export interface PokemonLink {
   spriteUrl: string
 }
 
+export const getPokemonIdFromUrl = (url: string) => url.match(/pokemon\/(\d+)/)?.[1] ?? "-1"
+
+export const spriteUrlfromPokemonId = (pokemonId: string) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
+
 export const getPokemonLink = (data: ApiPokemonSimplified): PokemonLink => ({
   name: data.name[0].toUpperCase() + data.name.slice(1),
-  id: data.url.match(/pokemon\/(\d+)/)?.[1] ?? "-1",
-  spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.url.match(
+  id: getPokemonIdFromUrl(data.url),
+  spriteUrl: spriteUrlfromPokemonId(data.url.match(
     /pokemon\/(\d+)/
-  )?.[1]}.png`,
+  )?.[1] ?? "-1"),
 })
