@@ -18,7 +18,7 @@ const getTypes = (
   }))
 
 export const getPokemonInfo = (data: any): PokemonInfo => ({
-  name: data.name,
+  name: data.name[0].toUpperCase() + data.name.slice(1),
   spriteUrl: data.sprites.front_default,
   types: getTypes(data.types),
 })
@@ -35,7 +35,7 @@ export interface PokemonLink {
 }
 
 export const getPokemonLink = (data: ApiPokemonSimplified): PokemonLink => ({
-  name: data.name,
+  name: data.name[0].toUpperCase() + data.name.slice(1),
   id: data.url.match(/pokemon\/(\d+)/)?.[1] ?? "-1",
   spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.url.match(
     /pokemon\/(\d+)/
