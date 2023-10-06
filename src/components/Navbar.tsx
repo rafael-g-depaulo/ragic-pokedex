@@ -19,19 +19,21 @@ const NavList = styled.nav`
 
   a {
     text-decoration: none;
-    color: turquoise;
+    color: #03303b;
 
     font-size: 1rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background: green;
+    background: #83becd;
 
-    transition: 0.2s;
+    transition: 0.1s;
     transform: none;
+    box-shadow: none;
 
     &:hover {
       transform: scale(1.2);
-      background: red;
+      background: #2196f3;
+      box-shadow: 0.125rem 0.125rem 0.6rem 0.125rem #000000a8;
     }
   }
 `
@@ -49,11 +51,9 @@ export const Navbar = () => {
     <Header>
       <NavbarParentStyle />
       <NavList>
-        <a>hiii</a>
-        <a>hiii</a>
-        <a>hiii</a>
-        <a>hiii</a>
-        <a href="#">hiii</a>
+        {/* olha que lugar legal pra botar um link pra Home */}
+        {/* olha que lugar legal pra botar um link pra Home */}
+        {/* olha que lugar legal pra botar um link pra Home */}
       </NavList>
     </Header>
   )

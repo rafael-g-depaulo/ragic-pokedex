@@ -1,28 +1,4 @@
-type types =
-  | "normal"
-  | "fire"
-  | "fighting"
-  | "water"
-  | "flying"
-  | "grass"
-  | "poison"
-  | "electric"
-  | "ground"
-  | "psychic"
-  | "rock"
-  | "ice"
-  | "bug"
-  | "dragon"
-  | "ghost"
-  | "dark"
-  | "steel"
-  | "fairy"
-  | "???"
-
-export interface Type {
-  name: types
-  id: string
-}
+import { Type } from "./pokemonType"
 
 export interface PokemonStats {
   hp: number

@@ -56,7 +56,7 @@ export const PokeCard: FC<PokeCardProps> = ({ pokemon }) => {
     <Card>
       <h3>{pokemon.name}</h3>
       <figure>
-        <img src={pokemon.spriteUrl} />
+        <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </figure>
     </Card>
   )

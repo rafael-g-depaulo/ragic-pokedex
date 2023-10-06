@@ -80,7 +80,7 @@ export const PokeInfoCard: FC<PokeInfoCardProps> = ({ pokemon }) => {
     <Card>
       <PokeStats className="stats" stats={pokemon.stats} />
       <figure className="img-container">
-        <img src={pokemon.spriteUrl} />
+        <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </figure>
       <ul>
         {pokemon.types.map(({ name }) => (

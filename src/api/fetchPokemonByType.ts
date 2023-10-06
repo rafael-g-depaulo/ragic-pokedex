@@ -1,6 +1,6 @@
 import { useQuery } from "react-query"
 import { pokeApi } from "."
-import { Type } from "../logic/getPokemonInfo"
+import { Type } from "../logic/pokemonType"
 import { parseType } from "../logic/pokemonType"
 
 export interface pokeApiType {

@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import { Type } from "../logic/getPokemonInfo"
+import { Type } from "../logic/pokemonType"
 
 const typeColors: { [k in Type["name"]]: { bg: string; outline: string } } = {
   normal: { bg: "#A8A878", outline: "#6D6D4E" },
