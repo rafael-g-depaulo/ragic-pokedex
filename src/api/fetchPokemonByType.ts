@@ -14,4 +14,8 @@ const fetchPokemonByType = (typeId: number) =>
     .then<pokeApiType>((response) => response.data)
     .then(parseType)
 
-export const usePokemonByType = (typeId: number) => useQuery(`/type/${typeId}`, () => fetchPokemonByType(typeId)).data ?? { name: '', pokemon: [] }
+export const usePokemonByType = (typeId: number) =>
+  useQuery(`/type/${typeId}`, () => fetchPokemonByType(typeId)).data ?? {
+    name: "",
+    pokemon: [],
+  }

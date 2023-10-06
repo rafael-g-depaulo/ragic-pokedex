@@ -1,5 +1,10 @@
 import { pokeApiType } from "../api/fetchPokemonByType"
-import { getPokemonIdFromUrl, PokemonLink, spriteUrlfromPokemonId, Type } from "./getPokemonInfo"
+import {
+  getPokemonIdFromUrl,
+  PokemonLink,
+  spriteUrlfromPokemonId,
+  Type,
+} from "./getPokemonInfo"
 
 export interface Poketype {
   name: Type["name"]

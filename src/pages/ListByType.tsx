@@ -20,12 +20,18 @@ export const ListPokemonByTypePage = () => {
     <>
       <Navbar />
       <PageContent>
-        <PageTitle>{!name ? <Loading /> : <TypeBadge name={name!}>{name}</TypeBadge>} Pokemon</PageTitle>
+        <PageTitle>
+          {!name ? <Loading /> : <TypeBadge name={name!}>{name}</TypeBadge>}{" "}
+          Pokemon
+        </PageTitle>
         <PokelistContainer>
-          {!pokemon ? <Loading /> :
+          {!pokemon ? (
+            <Loading />
+          ) : (
             pokemon.map((pokemon) => (
               <PokeCard pokemon={pokemon} key={pokemon.name} />
-            ))}
+            ))
+          )}
         </PokelistContainer>
       </PageContent>
     </>

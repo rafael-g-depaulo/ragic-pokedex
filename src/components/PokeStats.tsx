@@ -23,29 +23,29 @@ const Stat = styled.li<{ value: number; name: keyof PokemonStats }>`
     name === "hp"
       ? "#FF5959"
       : name === "attack"
-        ? "#F5AC78"
-        : name === "defense"
-          ? "#FAE078"
-          : name === "special-attack"
-            ? "#9DB7F5"
-            : name === "special-defense"
-              ? "#A7DB8D"
-              : name === "speed"
-                ? "#FA92B2"
-                : "white"};
+      ? "#F5AC78"
+      : name === "defense"
+      ? "#FAE078"
+      : name === "special-attack"
+      ? "#9DB7F5"
+      : name === "special-defense"
+      ? "#A7DB8D"
+      : name === "speed"
+      ? "#FA92B2"
+      : "white"};
 
   width: calc(${(props) => props.value} * 0.08rem);
   border-radius: 0.15rem;
   padding: 0.1rem 0.4rem;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-	:nth-child(2) {
-		color: #0004;
-		text-shadow: 0.02rem 0.02rem 2px #00000069;
-	}
+  :nth-child(2) {
+    color: #0004;
+    text-shadow: 0.02rem 0.02rem 2px #00000069;
+  }
 `
 
 const statLabel: { [k in keyof PokemonStats]: string } = {

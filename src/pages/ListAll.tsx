@@ -14,10 +14,13 @@ export const ListAllPokemonPage = () => {
       <PageContent>
         <PageTitle>List all Pokemon</PageTitle>
         <PokelistContainer>
-          {!data ? <Loading /> :
+          {!data ? (
+            <Loading />
+          ) : (
             data.map((pokemon) => (
               <PokeCard pokemon={pokemon} key={pokemon.name} />
-            ))}
+            ))
+          )}
         </PokelistContainer>
       </PageContent>
     </>
