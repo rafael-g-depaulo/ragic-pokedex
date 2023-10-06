@@ -20,6 +20,7 @@ const NavigationPannel = styled.main`
     font-size: 2rem;
 
     cursor: pointer;
+		text-decoration: none;
 
     font-weight: bold;
 
