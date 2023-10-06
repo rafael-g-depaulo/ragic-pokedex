@@ -9,13 +9,11 @@ import { PokeInfoCard } from "../components/PokeInfoCard"
 export const ShowPokemonPage: FC = () => {
   // get current pokemon id from route
   // get current pokemon id from route
-  const pokemon_id = 1
+  const pokemon_id = 3
   // get current pokemon id from route
   // get current pokemon id from route
 
   const pokemon = usePokemon(pokemon_id)
-
-  console.log(pokemon)
 
   return (
     <>

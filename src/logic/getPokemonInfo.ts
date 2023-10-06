@@ -1,15 +1,36 @@
+type types =
+  | "normal"
+  | "fire"
+  | "fighting"
+  | "water"
+  | "flying"
+  | "grass"
+  | "poison"
+  | "electric"
+  | "ground"
+  | "psychic"
+  | "rock"
+  | "ice"
+  | "bug"
+  | "dragon"
+  | "ghost"
+  | "dark"
+  | "steel"
+  | "fairy"
+  | "???"
+
 export interface Type {
-  name: string
+  name: types
   id: string
 }
 
 export interface PokemonStats {
-  hp: number,
-  attack: number,
-  defense: number,
-  "special-attack": number,
-  "special-defense": number,
-  speed: number,
+  hp: number
+  attack: number
+  defense: number
+  "special-attack": number
+  "special-defense": number
+  speed: number
 }
 
 export interface PokemonInfo {
@@ -23,12 +44,17 @@ const getTypes = (
   types: { slot: number; type: { name: string; url: string } }[]
 ): Type[] =>
   types.map(({ type }) => ({
-    name: type.name,
+    name: type.name.slice(0) as Type["name"],
     id: type.url.match(/type\/(\d+)/)?.[1] ?? "-1",
   }))
 
-const getStats = (stats: { base_stat: number, stat: { name: keyof PokemonStats } }[]): PokemonStats =>
-  stats.reduce<Partial<PokemonStats>>((acc, curStat) => ({ ...acc, [curStat.stat.name]: curStat.base_stat }), {}) as PokemonStats
+const getStats = (
+  stats: { base_stat: number; stat: { name: keyof PokemonStats } }[]
+): PokemonStats =>
+  stats.reduce<Partial<PokemonStats>>(
+    (acc, curStat) => ({ ...acc, [curStat.stat.name]: curStat.base_stat }),
+    {}
+  ) as PokemonStats
 
 export const getPokemonInfo = (data: any): PokemonInfo => ({
   name: data.name[0].toUpperCase() + data.name.slice(1),
