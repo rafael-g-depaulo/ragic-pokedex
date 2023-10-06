@@ -3,10 +3,20 @@ export interface Type {
   id: string
 }
 
+export interface PokemonStats {
+  hp: number,
+  attack: number,
+  defense: number,
+  "special-attack": number,
+  "special-defense": number,
+  speed: number,
+}
+
 export interface PokemonInfo {
   name: string
   spriteUrl: string
   types: Type[]
+  stats: PokemonStats
 }
 
 const getTypes = (
@@ -17,10 +27,14 @@ const getTypes = (
     id: type.url.match(/type\/(\d+)/)?.[1] ?? "-1",
   }))
 
+const getStats = (stats: { base_stat: number, stat: { name: keyof PokemonStats } }[]): PokemonStats =>
+  stats.reduce<Partial<PokemonStats>>((acc, curStat) => ({ ...acc, [curStat.stat.name]: curStat.base_stat }), {}) as PokemonStats
+
 export const getPokemonInfo = (data: any): PokemonInfo => ({
   name: data.name[0].toUpperCase() + data.name.slice(1),
   spriteUrl: data.sprites.front_default,
   types: getTypes(data.types),
+  stats: getStats(data.stats),
 })
 
 interface ApiPokemonSimplified {

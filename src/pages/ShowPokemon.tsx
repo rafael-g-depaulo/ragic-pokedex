@@ -15,6 +15,8 @@ export const ShowPokemonPage: FC = () => {
 
   const pokemon = usePokemon(pokemon_id)
 
+  console.log(pokemon)
+
   return (
     <>
       <Navbar />
