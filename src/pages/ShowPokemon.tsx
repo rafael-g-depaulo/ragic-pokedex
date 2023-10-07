@@ -5,11 +5,12 @@ import { Navbar } from "../components/Navbar"
 import { PageContent } from "../components/PageContent"
 import { PageTitle } from "../components/PageTitle"
 import { PokeInfoCard } from "../components/PokeInfoCard"
+import { useRouteParams } from "../routes"
 
 export const ShowPokemonPage: FC = () => {
   // get current pokemon id from route
   // get current pokemon id from route
-  const pokemon_id = 3
+  const { pokemon_id } = useRouteParams("/pokemon/:pokemon_id")
   // get current pokemon id from route
   // get current pokemon id from route
 

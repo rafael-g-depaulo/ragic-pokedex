@@ -8,13 +8,13 @@ export interface pokeApiType {
   pokemon: { pokemon: { name: string; url: string } }[]
 }
 
-const fetchPokemonByType = (typeId: number) =>
+const fetchPokemonByType = (typeId: string) =>
   pokeApi
     .get(`/type/${typeId}`)
     .then<pokeApiType>((response) => response.data)
     .then(parseType)
 
-export const usePokemonByType = (typeId: number) =>
+export const usePokemonByType = (typeId: string) =>
   useQuery(`/type/${typeId}`, () => fetchPokemonByType(typeId)).data ?? {
     name: "",
     pokemon: [],

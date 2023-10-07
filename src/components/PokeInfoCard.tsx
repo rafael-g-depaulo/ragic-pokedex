@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { styled } from "styled-components"
 import { PokemonInfo } from "../logic/getPokemonInfo"
+import { Link } from "../routes"
 import { PokeStats } from "./PokeStats"
 import { TypeBadge } from "./TypeBadge"
 
@@ -58,10 +59,21 @@ const Card = styled.main`
 
     align-self: start;
     display: flex;
-    gap: 0.2rem;
+    gap: 0.4rem;
 
     a {
       text-decoration: none;
+    }
+
+    ${TypeBadge} {
+      transform: none;
+      transition: 0.1s;
+      box-shadow: 0.125rem 0.125rem 0px 0px #00000030;
+
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 0.175rem 0.175rem 2px 0px #00000069;
+      }
     }
   }
 
@@ -83,9 +95,11 @@ export const PokeInfoCard: FC<PokeInfoCardProps> = ({ pokemon }) => {
         <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </figure>
       <ul>
-        {pokemon.types.map(({ name }) => (
+        {pokemon.types.map(({ name, id }) => (
           <li>
-            <TypeBadge name={name}>{name}</TypeBadge>
+            <Link to="/type/:type_id" params={{ type_id: id }}>
+              <TypeBadge name={name}>{name}</TypeBadge>
+            </Link>
           </li>
         ))}
       </ul>

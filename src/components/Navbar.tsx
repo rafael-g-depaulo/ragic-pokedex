@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components"
+import { Link } from "../routes"
 
 const Header = styled.header`
   padding: 0.8rem 0.4rem;
@@ -51,9 +52,7 @@ export const Navbar = () => {
     <Header>
       <NavbarParentStyle />
       <NavList>
-        {/* olha que lugar legal pra botar um link pra Home */}
-        {/* olha que lugar legal pra botar um link pra Home */}
-        {/* olha que lugar legal pra botar um link pra Home */}
+        <Link to="/">Home</Link>
       </NavList>
     </Header>
   )
