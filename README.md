@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# Projeto de Teste: Biblioteca Ragic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Ideia
+O objetivo desse projeto teste é desenvolvedores com experiência em react (vocês) possam avaliar a biblioteca Ragic e comparar seu uso com a React-Router-Dom, avaliando a usabilidade, intuitividade e conforto de uso.
 
-## Available Scripts
+#### Especificação do projeto
 
-In the project directory, you can run:
+Todos adoramos Pokemon, mas tem 500 bilhões deles e eu não lembro quem é quem! Preciso da sua ajuda para montar um app web de pokedex, para poder listar todos os pokemons, ver todos os pokemons de cada tipo, e visualizar em detalhes a informação de um único pokemon.
 
-### `yarn start`
+Já tem pronto na branch `main` todos os componentes visuais (na pasta `src/components/`), a lógica de comunicação com [a API pronta da pokedex](https://pokeapi.co) (na pasta `src/api/`), a lógica interna de tipos (`src/logic/`, isso só faz parse das informações recebidas da API e define os tipos usados na pokedex), a estilização global do app (`src/styles/`), e até as páginas do app em si estão parcialmente construídas (na pasta `src/pages/`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+É necessário então que você construa uma lógica de roteamento para as páginas, seguindo o plano abaixo das rotas que a pokedex precisa:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Rota                   | Descrição                                                              |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `/`                    | Home do app, que deixa ir para a página de listagem global ou por tipo |
+| `/pokemon`             | Lista de todos os pokemons                                             |
+| `/pokemon/:pokemon_id` | Visualizar detalhes do pokemon de id `:pokemon_id`                     |
+| `/type/:type_id`       | Lista de todos os pokemons do tipo de id `:type_id`                    |
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+A documentação da biblioteca se encontra disponível [aqui](https://www.npmjs.com/package/@ragic/ragiclib)
