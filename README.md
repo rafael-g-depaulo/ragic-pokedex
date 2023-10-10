@@ -18,4 +18,13 @@ Já tem pronto na branch `main` todos os componentes visuais (na pasta `src/comp
 | `/pokemon/:pokemon_id` | Visualizar detalhes do pokemon de id `:pokemon_id`                     |
 | `/type/:type_id`       | Lista de todos os pokemons do tipo de id `:type_id`                    |
 
+**PS:** Lembre de importar a biblioteca com 
+```sh
+yarn add @ragic/ragiclib
+```
+ou
+```sh
+npm install @ragic/ragiclib
+```
+
 A documentação da biblioteca se encontra disponível [aqui](https://www.npmjs.com/package/@ragic/ragiclib)
