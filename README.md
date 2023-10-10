@@ -20,11 +20,11 @@ Já tem pronto na branch `main` todos os componentes visuais (na pasta `src/comp
 
 **PS:** Lembre de importar a biblioteca com 
 ```sh
-yarn add @ragic/ragiclib
+yarn add ragic
 ```
 ou
 ```sh
-npm install @ragic/ragiclib
+npm install ragic
 ```
 
-A documentação da biblioteca se encontra disponível [aqui](https://www.npmjs.com/package/@ragic/ragiclib)
+A documentação da biblioteca se encontra disponível [aqui](https://www.npmjs.com/package/ragic)
