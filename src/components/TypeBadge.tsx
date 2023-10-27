@@ -24,6 +24,8 @@ const typeColors: { [k in Type["name"]]: { bg: string; outline: string } } = {
 }
 
 export const TypeBadge = styled.span<{ name: Type["name"] }>`
+  display: inline-block;
+
   background: ${({ name }) => typeColors[name].bg};
 
   text-transform: capitalize;

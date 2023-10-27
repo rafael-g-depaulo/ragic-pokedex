@@ -58,10 +58,20 @@ const Card = styled.main`
 
     align-self: start;
     display: flex;
-    gap: 0.2rem;
+    gap: 0.4rem;
 
     a {
       text-decoration: none;
+    }
+
+		${TypeBadge} {
+      transform: none;
+      transition: 0.1s;
+      box-shadow: 0.125rem 0.125rem 0px 0px #00000030;
+      &:hover {
+        transform: scale(1.15);
+        box-shadow: 0.175rem 0.175rem 2px 0px #00000069;
+      }
     }
   }
 

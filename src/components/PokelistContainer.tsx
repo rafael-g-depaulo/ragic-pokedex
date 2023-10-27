@@ -11,4 +11,6 @@ export const PokelistContainer = styled.main`
   background-color: #b8e3d7;
   padding: 1.6rem 0.2rem;
   justify-content: center;
+
+	a { text-decoration: none; }
 `
