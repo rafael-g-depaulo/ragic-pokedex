@@ -27,4 +27,6 @@ ou
 npm install ragic
 ```
 
+**OBS:** Se você se sentir perdido, pode dar uma olhada na branch `complete`, que tem uma solução completa do app.
+
 A documentação da biblioteca se encontra disponível [aqui](https://www.npmjs.com/package/ragic)
