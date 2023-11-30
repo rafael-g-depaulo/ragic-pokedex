@@ -89,11 +89,9 @@ export const HomePage = () => {
         <NavigationPannel>
           <Link to="/pokemon">All Pokemon</Link>
           <ul>
-            {/* eslint-disable-next-line */}
             {PokemonTypes.map(({ name, id }) => (
               <li key={name}>
                 <Link to="/type/:type_id" params={{ type_id: `${id}` }}>
-                  {" "}
                   <TypeBadge name={name}>{name}</TypeBadge>
                 </Link>
               </li>
