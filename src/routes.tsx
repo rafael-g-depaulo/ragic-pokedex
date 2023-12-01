@@ -1,4 +1,4 @@
-import { UseRoutes, createRoutes, path } from "@ragic/ragiclib"
+import { UseRoutes, createRoutes, path } from "ragic"
 import { HomePage } from "./pages/HomePage"
 import { ListAllPokemonPage } from "./pages/ListAll"
 import { ListPokemonByTypePage } from "./pages/ListByType"

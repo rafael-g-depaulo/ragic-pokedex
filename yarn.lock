@@ -2429,13 +2429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ragic/ragiclib@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@ragic/ragiclib@npm:0.0.2"
-  checksum: 76e6869dc0de988554679edcf7a131c4e2233774b43c2ceca6435b6127c3f96dd133a48859c76e65d17713840a141c3f38af5160c0629bd32538b5db986f8583
-  languageName: node
-  linkType: hard
-
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -11197,7 +11190,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ragic-pokedex@workspace:."
   dependencies:
-    "@ragic/ragiclib": ^0.0.2
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
@@ -11210,6 +11202,7 @@ __metadata:
     "@types/styled-components": ^5.1.28
     axios: ^1.5.1
     prettier: ^3.0.3
+    ragic: ^0.2.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-query: ^3.39.3
@@ -11219,6 +11212,13 @@ __metadata:
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
+
+"ragic@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "ragic@npm:0.2.0"
+  checksum: 01e757d717f872649e01f49b83930e83e766ba3ab5716cba292d89f18142754021976664655bee02c702c42329fae607d4294e12bd45c7fb354e77ffd60f25bc
+  languageName: node
+  linkType: hard
 
 "randombytes@npm:^2.1.0":
   version: 2.1.0
